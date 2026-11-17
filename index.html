@@ -38,7 +38,8 @@ section{padding:80px 0}
 @media (prefers-reduced-motion:reduce){.hero::before{animation:none}html{scroll-behavior:auto}}
 .hero .wrap{position:relative}
 .site-header{background:#fff;border-bottom:1px solid #EADBC6}
-.site-header .wrap{display:flex;align-items:center;min-height:82px}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:82px}
+.site-header .btn{flex:none}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#3A2A22}
 .logo-mark{position:relative;width:140px;height:54px;overflow:hidden;flex:none}
 .logo-mark img{position:absolute;width:172px;height:108px;max-width:none;left:-16px;top:-7px}
@@ -101,7 +102,8 @@ footer{padding:34px 0;font-family:Inter,sans-serif;font-size:14px;color:var(--mu
   body{font-size:18px} section{padding:56px 0}
   .grid,.weeks,.how .grid,.buffer .grid,.prices{grid-template-columns:1fr}
   .hero{padding:64px 0 90px}
-  .site-header .wrap{min-height:58px}
+  .site-header .wrap{flex-wrap:wrap;min-height:0;padding-top:12px;padding-bottom:12px;row-gap:10px}
+  .site-header .btn{margin-left:auto}
   .logo{gap:8px}
   .logo-mark{width:104px;height:40px}
   .logo-mark img{width:127px;height:80px;left:-12px;top:-5px}
@@ -119,6 +121,7 @@ footer{padding:34px 0;font-family:Inter,sans-serif;font-size:14px;color:var(--mu
       </span>
       <span class="logo-name">Anna Brooke Healing</span>
     </a>
+    <a class="btn" href="#join">Start the 21 days</a>
   </div>
 </header>
 
@@ -127,7 +130,6 @@ footer{padding:34px 0;font-family:Inter,sans-serif;font-size:14px;color:var(--mu
     <div class="badge">Pre-Black Friday: $27 early tester access</div>
     <h1>Tend your inner fire.</h1>
     <p class="lead">The new and improved 21-day self-care course, opening first to Anna's network. Start the moment you join, move at your own pace, and use it as a buffer through the holidays and a fresh start in the new year.</p>
-    <a class="btn" href="#join">Start the 21 days</a>
     <p class="note">For Anna's network only. Test-drive the course, share honest feedback, and try it risk-free through January 1.</p>
   </div>
 </section>
