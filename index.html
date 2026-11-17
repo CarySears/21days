@@ -3,107 +3,95 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Tend Your Inner Fire | 21 Days of Self-Care with Anna Brooke</title>
+<title>Tend your inner fire, one small act of care at a time.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-/* Brand tokens: swap these hex values for Anna's exact palette */
 :root{
-  --rust:#9C4A2F; --coral:#D9785A; --shell:#FBF4EC; --sand:#EADBC6; --ochre:#C9923A; --sea:#4F7F7C; --sky:#A9C7D6;
-  --ink:#3A2A22; --ember:#2B1A14; --bg:var(--shell); --card:#FFFFFF; --muted:#6E5A4E;
-  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  --rust:#9B4D32;
+  --ochre:#CE8F29;
+  --coral:#E27756;
+  --shell:#F3D9D0;
+  --sky:#A3B6E5;
+  --sand:#F2EDE2;
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#1F1511;--card:#2A1D17;--ink:#F3E7DA;--muted:#C9B6A5;--sand:#3A2A22}
-}
-:root[data-theme="dark"]{--bg:#1F1511;--card:#2A1D17;--ink:#F3E7DA;--muted:#C9B6A5;--sand:#3A2A22}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:19px;line-height:1.65}
-h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.15;margin:0 0 .5em;font-weight:500}
-p{margin:0 0 1em;max-width:62ch}
-.sans{font-family:Inter,system-ui,sans-serif}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--sand);color:var(--rust);font-family:"Source Serif 4",Georgia,serif;font-size:19px;line-height:1.65}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.2;font-weight:500;color:inherit}
+h1{font-size:clamp(2.2rem,5vw,3.5rem);margin:0 0 .45em}
+h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin:0 0 .7em}
+h3{font-size:1.35rem;margin:0 0 .4em}
+p{margin:0 0 1em}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-section{padding:80px 0}
+.narrow{max-width:40rem}
+section{padding:72px 0}
+.sand{background:var(--sand);color:var(--rust)}
+.shell{background:var(--shell);color:var(--rust)}
+.rust{background:var(--rust);color:var(--sand)}
+.final{text-align:center}
+.final .narrow{margin-left:auto;margin-right:auto}
+.eyebrow{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:.04em;margin:0 0 1em}
+.micro{font-family:Inter,system-ui,sans-serif;font-size:14px;margin:16px 0 0}
+.emph{font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.45rem,2.5vw,1.85rem);line-height:1.3;margin:1.2em 0}
+.quote{font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.5rem,3vw,2rem);line-height:1.35;margin:1.2em 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;max-width:100%;font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:17px;line-height:1.2;text-decoration:none;padding:16px 30px;border-radius:999px;border:0}
+.btn-sand{background:var(--sand);color:var(--rust)}
+.btn-rust{background:var(--rust);color:var(--sand)}
+.rust :focus-visible{outline-color:var(--sand)}
+.cards{display:grid;grid-template-columns:1fr;gap:20px}
+.card{background:var(--shell);border-radius:18px;padding:28px;border-top:4px solid var(--coral)}
+.shell .card{background:var(--sand)}
+.cards.six .card:nth-child(4n+1){border-top-color:var(--coral)}
+.cards.six .card:nth-child(4n+2){border-top-color:var(--ochre)}
+.cards.six .card:nth-child(4n+3){border-top-color:var(--rust)}
+.cards.six .card:nth-child(4n+4){border-top-color:var(--sky)}
+.cards.journey .card:nth-child(1){border-top-color:var(--coral)}
+.cards.journey .card:nth-child(2){border-top-color:var(--ochre)}
+.cards.journey .card:nth-child(3){border-top-color:var(--sky)}
+.cards.samples .card{background:var(--shell)}
+.cards.samples .card:nth-child(1){border-top-color:var(--coral)}
+.cards.samples .card:nth-child(2){border-top-color:var(--ochre)}
+.cards.samples .card:nth-child(3){border-top-color:var(--sky)}
+.card p,.card li{max-width:none}
+.card ul,.offer ul{margin:0 0 1em;padding-left:1.2em}
+.card li,.offer li{margin:0 0 .4em}
+.invite{font-style:italic}
+.closing{margin-top:1.4em}
+.cols{display:grid;grid-template-columns:1fr;gap:28px}
+.prices{display:grid;grid-template-columns:1fr;gap:20px;margin:1.5em 0}
+.price-card{background:var(--sand);color:var(--rust);border-radius:18px;padding:28px}
+.price-card.featured{border:3px solid var(--rust)}
+.price-card.later{border-top:4px solid var(--ochre)}
+.price{font-family:"Playfair Display",Georgia,serif;font-size:3.4rem;font-weight:700;line-height:1;color:var(--rust);margin:0 0 .25em}
+.price-card.featured .price{font-size:4rem}
+.price-sub{font-family:Inter,system-ui,sans-serif;font-weight:600;margin:0 0 .6em}
+.section-cta{margin-top:1.6em}
+.signoff{margin-bottom:.2em}
+.mail{text-decoration:underline}
+footer{padding:34px 0;font-family:Inter,system-ui,sans-serif;font-size:14px;text-align:center;color:var(--rust)}
 
-/* Hero: the one memorable thing, a slowly breathing ember */
-.hero{background:var(--ember);color:#FBEBDD;position:relative;overflow:hidden;padding:96px 0 110px}
-.hero::before{content:"";position:absolute;left:50%;bottom:-260px;width:760px;height:760px;margin-left:-380px;border-radius:50%;
-  background:radial-gradient(circle,rgba(217,120,90,.65) 0%,rgba(201,146,58,.30) 32%,rgba(156,74,47,0) 66%);
-  animation:breathe 7s ease-in-out infinite}
-@keyframes breathe{0%,100%{transform:scale(.92);opacity:.75}50%{transform:scale(1.06);opacity:1}}
-@media (prefers-reduced-motion:reduce){.hero::before{animation:none}html{scroll-behavior:auto}}
-.hero .wrap{position:relative}
 .site-header{background:#fff;border-bottom:1px solid #EADBC6}
-.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:82px}
-.site-header .btn{flex:none}
+.site-header .wrap{display:flex;align-items:center;min-height:82px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#3A2A22}
 .logo-mark{position:relative;width:140px;height:54px;overflow:hidden;flex:none}
 .logo-mark img{position:absolute;width:172px;height:108px;max-width:none;left:-16px;top:-7px}
 .logo-name{font-family:"Playfair Display",Georgia,serif;font-size:18px;font-weight:500;line-height:1;white-space:nowrap}
-.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:700;max-width:14ch}
-.hero p.lead{font-size:1.3rem;color:#F1DCC8;max-width:34em}
-.btn{display:inline-block;font-family:Inter,sans-serif;font-weight:600;font-size:17px;text-decoration:none;background:var(--coral);color:#2B1A14;padding:16px 30px;border-radius:999px;transition:background .2s}
-.btn:hover{background:var(--ochre)}
-.note{font-family:Inter,sans-serif;font-size:14px;margin-top:16px;color:var(--sand)}
 
-.badge{display:inline-block;font-family:Inter,sans-serif;font-weight:600;font-size:14px;background:var(--ochre);color:#2B1A14;padding:6px 16px;border-radius:999px;margin-bottom:28px}
-.buffer .grid{grid-template-columns:repeat(3,1fr)}
-.prices{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:760px;margin:32px auto 20px;text-align:left}
-.amt{font-family:"Playfair Display",Georgia,serif;font-size:2.8rem;font-weight:700;line-height:1;margin:0 0 .3em}
-.prices .way p{max-width:none}
-.guarantee{max-width:760px;margin:0 auto 36px;text-align:left;background:var(--card);border-left:6px solid var(--sea);border-radius:4px 18px 4px 18px;padding:26px 30px}
-.guarantee h3{font-size:1.35rem}.guarantee p{margin:0;color:var(--muted);font-size:17px}
-.fine{font-family:Inter,sans-serif;font-size:14px;color:var(--muted);margin:0 auto 28px!important}
-/* Call */
-.call{max-width:720px}
-.call h2{font-size:clamp(1.9rem,4vw,2.8rem)}
-.call .big{font-family:"Playfair Display",serif;font-style:italic;font-size:1.5rem;color:var(--rust)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .call .big{color:var(--coral)}}
-
-/* Four ways */
-.ways{background:var(--sand)}
-.ways h2,.arc h2,.how h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1em}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.way{background:var(--card);padding:30px;border-left:6px solid var(--coral);border-radius:4px 18px 4px 18px}
-.way:nth-child(2){border-color:var(--sea)}.way:nth-child(3){border-color:var(--ochre)}.way:nth-child(4){border-color:var(--rust)}
-.way h3{font-size:1.45rem}
-.way p{margin:0;color:var(--muted);font-size:17px}
-
-/* Arc: a real sequence, so numbered weeks are earned */
-.weeks{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.week{border-top:4px solid var(--rust);padding-top:18px}
-.week:nth-child(2){border-color:var(--ochre)}.week:nth-child(3){border-color:var(--sea)}
-.week h3{font-size:1.35rem}
-.week .days{font-family:Inter,sans-serif;font-size:14px;color:var(--muted);margin-bottom:10px}
-.week ul{margin:0;padding-left:1.1em;color:var(--muted);font-size:17px}
-.week li{margin-bottom:.3em}
-
-/* How */
-.how{background:var(--ember);color:#FBEBDD}
-.how .grid{grid-template-columns:repeat(3,1fr)}
-.how .item{padding:6px 0}
-.how h3{font-size:1.3rem;color:var(--coral)}
-.how p{color:#F1DCC8;font-size:17px}
-
-/* Anna + CTA */
-.anna{max-width:720px}
-.anna blockquote{margin:0 0 1.2em;font-family:"Playfair Display",serif;font-style:italic;font-size:1.6rem;line-height:1.35;color:var(--rust)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .anna blockquote{color:var(--coral)}}
-.join{background:var(--sand);text-align:center}
-.join h2{font-size:clamp(2rem,5vw,3.2rem)}
-.join p{margin-left:auto;margin-right:auto}
-footer{padding:34px 0;font-family:Inter,sans-serif;font-size:14px;color:var(--muted);text-align:center}
-
+@media (min-width:760px){
+  .cards.six{grid-template-columns:1fr 1fr}
+  .prices{grid-template-columns:1fr 1fr}
+}
+@media (min-width:1040px){
+  .cards.six,.cards.journey,.cards.samples,.cols{grid-template-columns:1fr 1fr 1fr}
+}
 @media (max-width:760px){
-  body{font-size:18px} section{padding:56px 0}
-  .grid,.weeks,.how .grid,.buffer .grid,.prices{grid-template-columns:1fr}
-  .hero{padding:64px 0 90px}
-  .site-header .wrap{flex-wrap:wrap;min-height:0;padding-top:12px;padding-bottom:12px;row-gap:10px}
-  .site-header .btn{margin-left:auto}
+  body{font-size:18px}
+  section{padding:48px 0}
+  .hero{padding:40px 0 48px}
   .logo{gap:8px}
   .logo-mark{width:104px;height:40px}
   .logo-mark img{width:127px;height:80px;left:-12px;top:-5px}
@@ -121,125 +109,338 @@ footer{padding:34px 0;font-family:Inter,sans-serif;font-size:14px;color:var(--mu
       </span>
       <span class="logo-name">Anna Brooke Healing</span>
     </a>
-    <a class="btn" href="#join">Start the 21 days</a>
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="badge">Pre-Black Friday: $27 early tester access</div>
-    <h1>Tend your inner fire.</h1>
-    <p class="lead">The new and improved 21-day self-care course, opening first to Anna's network. Start the moment you join, move at your own pace, and use it as a buffer through the holidays and a fresh start in the new year.</p>
-    <p class="note">For Anna's network only. Test-drive the course, share honest feedback, and try it risk-free through January 1.</p>
+<main>
+<section class="hero rust">
+  <div class="wrap narrow">
+    <p class="eyebrow">PRE–BLACK FRIDAY · EARLY TESTER ACCESS · $27</p>
+    <h1>Tend your inner fire, one small act of care at a time.</h1>
+    <p>A gentle, 21-day self-care course with Anna Brooke to help you reconnect with yourself through breathwork, movement, reflection, and simple everyday practices.</p>
+    <p>Because caring for yourself doesn't have to mean doing more.</p>
+    <p>Sometimes it begins with one conscious breath, one small choice, or a moment to listen to what you need.</p>
+    <a class="btn btn-sand" href="#" id="signup-link">Get instant access for $27</a>
+    <p class="micro">Log in immediately after purchase · All 21 days available from the start · Go at your own pace</p>
   </div>
 </section>
 
-<section>
-  <div class="wrap call">
-    <h2>Does your fire feel low as the year closes?</h2>
-    <p>This stretch of the calendar asks a lot. Gatherings, expectations, year-end deadlines, and the pressure to feel festive all at once. Many of us arrive at the finish line running on embers.</p>
-    <p class="big">Your light has not gone out. It may just need tending.</p>
-    <p>Listen for the call to slow down, take stock of the year you have lived, and give your attention back to yourself. That is where kindling the light within begins.</p>
+<section class="sand">
+  <div class="wrap narrow">
+    <h2>When was the last time you made room for yourself?</h2>
+    <p>There is always something that needs your attention.</p>
+    <p>Work. Family. Relationships. Responsibilities. The ever-growing list of things to do.</p>
+    <p>And as the holidays approach, that list can feel even longer.</p>
+    <p>It's easy to move through your days taking care of everything and everyone, only to realize there's very little energy left for you.</p>
+    <p>Maybe you've been meaning to slow down. Maybe you know you need more rest, more quiet, or more space to simply be.</p>
+    <p>But knowing you need care and knowing how to give it to yourself aren't always the same thing.</p>
+    <p class="emph">You deserve to be included in the care you give.</p>
+    <p>And you don't need to overhaul your life to begin.</p>
+    <p>You can start small.</p>
+    <p>That's what these 21 days are about.</p>
   </div>
 </section>
 
-<section class="ways">
+<section class="shell">
+  <div class="wrap narrow">
+    <h2>What if self-care became something you naturally return to?</h2>
+    <p>Not another routine to keep up with.</p>
+    <p>Not another challenge to complete perfectly.</p>
+    <p>And certainly not another thing to feel guilty about when life gets busy.</p>
+    <p>Instead, imagine developing a habit of noticing what you need and responding with a little more kindness.</p>
+    <p>Taking a conscious breath before rushing into the next thing.</p>
+    <p>Moving your body because it feels good.</p>
+    <p>Clearing a small space that's been weighing on you.</p>
+    <p>Giving yourself permission to rest.</p>
+    <p>Listening to your heart instead of automatically putting yourself last.</p>
+    <p>These are ordinary moments.</p>
+    <p>But with practice, they can become meaningful ways of showing up for yourself.</p>
+    <p class="emph">The intention behind this course is simple: to help you begin building a reflex of self-care, one small action at a time.</p>
+  </div>
+</section>
+
+<section class="sand">
   <div class="wrap">
-    <h2>Four ways to meet this season with care</h2>
-    <div class="grid">
-      <div class="way"><h3>Honor the year you had</h3><p>The wins, the losses, and everything in between. Pause long enough to acknowledge what you carried before you step into what comes next.</p></div>
-      <div class="way"><h3>Protect your peace</h3><p>Insulate yourself from holiday stress and the moods and opinions swirling around you. Practice the small boundaries that keep your inner space calm.</p></div>
-      <div class="way"><h3>Protect your time</h3><p>Choose one priority at a time instead of juggling all of them. Your attention is a form of energy, and you get to decide where it goes.</p></div>
-      <div class="way"><h3>Tend your inner fire</h3><p>Breathe, move, clear a little space, and listen to your heart. Simple daily acts that rekindle the light within.</p></div>
+    <div class="narrow">
+      <h2>What you'll find inside</h2>
+      <p>Over 21 days, Anna shares reflections, practical invitations, and personal guidance to help you explore what caring for yourself can look like in your own life.</p>
     </div>
+    <div class="cards six">
+      <article class="card">
+        <h3>A new perspective on self-care</h3>
+        <p>Explore how your thoughts, words, habits, and surroundings influence your experience. Learn to recognize the difference between self-care and self-soothing, and discover where you might begin giving yourself more attention.</p>
+      </article>
+      <article class="card">
+        <h3>Simple breathing practices</h3>
+        <p>Reconnect with your breath through gentle invitations to pause, breathe, and become more present. The course includes a guided five-minute breathing track you can return to.</p>
+      </article>
+      <article class="card">
+        <h3>Movement that feels good</h3>
+        <p>Rediscover the pleasure of moving your body, whether through dancing, stretching, or simply taking a moment to move. You'll also receive a gentle stretching video with Anna.</p>
+      </article>
+      <article class="card">
+        <h3>Space to clear and let go</h3>
+        <p>Explore the connection between your surroundings and how you feel. Practice clearing small areas of your home, releasing what you no longer need, and creating a little more room in your everyday life.</p>
+      </article>
+      <article class="card">
+        <h3>Reflection and self-discovery</h3>
+        <p>Through journaling prompts, thoughtful questions, and exercises in awareness, you'll be invited to notice what matters to you, what you're ready to release, and what you'd like to welcome into your life.</p>
+      </article>
+      <article class="card">
+        <h3>Heart-centered and spiritual practices</h3>
+        <p>Explore listening to your heart, practicing gratitude, and reconnecting with your inner guidance. The later lessons include spiritual reflection and prayer, which you're welcome to engage with in whatever way feels meaningful to you.</p>
+      </article>
+    </div>
+    <p class="closing narrow">Nothing needs to be done perfectly. Every practice is an invitation. Take what serves you and leave what doesn't.</p>
   </div>
 </section>
 
-<section class="arc">
+<section class="shell">
   <div class="wrap">
-    <h2>What is inside the 21 days</h2>
-    <div class="weeks">
-      <div class="week">
-        <h3>Part one: Ground</h3>
-        <div class="days">Days 1 to 7</div>
+    <div class="narrow">
+      <h2>Your 21-day self-care journey</h2>
+      <p>The course moves from awareness and simple physical practices into making space, letting go, and reconnecting with your heart.</p>
+      <p>Here's what you'll explore along the way.</p>
+    </div>
+    <div class="cards journey">
+      <article class="card">
+        <p class="eyebrow">Days 1–7</p>
+        <h3>Begin with awareness, breath, and movement</h3>
+        <p>Your first week is about noticing.</p>
+        <p>You'll explore what gives you energy, what takes it away, and how your thoughts, words, and daily habits influence the way you experience your life.</p>
+        <p>You'll also begin practicing some of the most accessible forms of self-care: breathing and moving your body.</p>
         <ul>
-          <li>Notice where your energy goes</li>
-          <li>See how thoughts and words shape your day</li>
-          <li>Learn self-care versus self-soothing</li>
-          <li>Come home to your breath</li>
-          <li>Move your body for the pleasure of it</li>
+          <li>Noticing what energizes and depletes you.</li>
+          <li>Becoming more aware of your thoughts and self-talk.</li>
+          <li>Understanding self-care versus self-soothing.</li>
+          <li>Connecting with your breath.</li>
+          <li>Practicing five minutes of conscious breathing.</li>
+          <li>Moving your body simply because it feels good.</li>
         </ul>
-      </div>
-      <div class="week">
-        <h3>Part two: Clear</h3>
-        <div class="days">Days 8 to 14</div>
+        <p class="invite">The invitation: Start paying attention to yourself with curiosity rather than judgment.</p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Days 8–14</p>
+        <h3>Make space, inside and out</h3>
+        <p>In the second week, you'll explore how caring for yourself can also mean caring for the spaces you inhabit and the things you've been carrying.</p>
+        <p>You'll be invited to make yourself a priority, practice surrendering what you cannot control, and begin clearing small areas of your home.</p>
+        <p>Because sometimes clearing a drawer, finishing a small task, or releasing an object you've held onto can open up a surprising amount of space.</p>
         <ul>
-          <li>Stretch with a gentle practice from Anna</li>
-          <li>Make yourself the one priority</li>
-          <li>Surrender and sanitize</li>
-          <li>Clear one small space at a time</li>
-          <li>Let go, and see your home as a mirror</li>
+          <li>Gentle stretching with Anna.</li>
+          <li>Making yourself a priority.</li>
+          <li>Surrendering what lies outside your control.</li>
+          <li>Cleaning and clearing one small space at a time.</li>
+          <li>Building momentum by finishing what you start.</li>
+          <li>Recognizing the feelings attached to your belongings.</li>
+          <li>Exploring how your living space reflects your inner world.</li>
         </ul>
-      </div>
-      <div class="week">
-        <h3>Part three: Kindle</h3>
-        <div class="days">Days 15 to 21</div>
+        <p class="invite">The invitation: Discover what becomes possible when you give yourself permission to make room.</p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Days 15–21</p>
+        <h3>Return to your body, your heart, and yourself</h3>
+        <p>Your final week brings the focus inward.</p>
+        <p>After exploring awareness, movement, and letting go, you'll be invited to rest, reflect, and listen more closely to yourself.</p>
+        <p>Through gentle body awareness, journaling, heart-centered reflection, and gratitude, you'll explore the experience of being present with yourself.</p>
         <ul>
-          <li>Take a well-deserved break</li>
-          <li>Release, invite, and give thanks</li>
-          <li>Return to your body</li>
-          <li>Listen to your heart</li>
-          <li>Close with gratitude and a prayer</li>
+          <li>Taking a well-deserved break.</li>
+          <li>A writing exercise focused on releasing, inviting, and gratitude.</li>
+          <li>Returning to your body through gentle movement.</li>
+          <li>Taking one small action to care for yourself.</li>
+          <li>Listening to your heart and what it has to say.</li>
+          <li>Reflecting on self-love and inner guidance.</li>
+          <li>Closing the journey with a simple prayer of gratitude.</li>
         </ul>
+        <p class="invite">The invitation: Begin trusting that caring for yourself can become a natural part of how you live.</p>
+      </article>
+    </div>
+    <p class="section-cta"><a class="btn btn-rust" href="#">Get instant access for $27</a></p>
+  </div>
+</section>
+
+<section class="sand">
+  <div class="wrap">
+    <div class="narrow">
+      <h2>What does a small act of self-care actually look like?</h2>
+      <p>Sometimes the simplest invitations are the ones we most need.</p>
+      <p>Here are three examples from the course.</p>
+    </div>
+    <div class="cards samples">
+      <article class="card">
+        <h3>Take five minutes to breathe</h3>
+        <p>Set a timer, put your phone aside, and give yourself five uninterrupted minutes to simply breathe.</p>
+        <p>Anna provides a guided breathing track to accompany you.</p>
+        <p>No multitasking. Nothing to accomplish.</p>
+        <p>Just a few minutes to be with yourself.</p>
+      </article>
+      <article class="card">
+        <h3>Clear one small space</h3>
+        <p>Choose a drawer, a shelf, or even the inside of your bag.</p>
+        <p>Take everything out, clean the space, and decide what belongs there.</p>
+        <p>Finish what you started, and take a moment to appreciate what you've done.</p>
+        <p>The practice isn't about having a perfect home. It's about giving yourself the experience of starting, finishing, and making a little room.</p>
+      </article>
+      <article class="card">
+        <h3>Listen to your heart</h3>
+        <p>Place a hand over your heart and take a gentle breath.</p>
+        <p>Ask yourself:</p>
+        <p class="invite">How can I love myself today?</p>
+        <p class="invite">What are three ways I can care for myself?</p>
+        <p>Then give yourself a moment to listen.</p>
+        <p>You don't have to force an answer.</p>
+        <p>Sometimes the act of asking is a meaningful place to begin.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="rust">
+  <div class="wrap">
+    <div class="narrow">
+      <h2>Built for a real life, not a perfect one</h2>
+      <p>You don't need a beautifully organized schedule, a spotless home, or an hour of uninterrupted quiet to begin caring for yourself.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>Start whenever you're ready</h3>
+        <p>Your course is accessible immediately after purchase. Log in, explore the lessons, and begin whenever it feels right.</p>
+      </div>
+      <div>
+        <h3>Your course, your pace</h3>
+        <p>All 21 days are available from the start. Take them in order, move through them slowly, or return to a practice whenever you need it.</p>
+      </div>
+      <div>
+        <h3>Nothing to keep up with</h3>
+        <p>Each lesson offers an invitation, not another obligation. There's no need to complete every exercise or follow a rigid schedule.</p>
       </div>
     </div>
+    <p class="emph">Self-care isn't another performance. It's a relationship with yourself.</p>
   </div>
 </section>
 
-<section class="ways buffer">
+<section class="sand">
+  <div class="wrap narrow">
+    <h2>A little about me</h2>
+    <p>Hi, I'm Anna Brooke.</p>
+    <p>I've been a breathworker since 2010, and over the years my work has continued to bring me back to one essential relationship: the one I have with myself.</p>
+    <p>But I didn't always understand that.</p>
+    <p>For a long time, my attention was focused outward, toward other people, their feelings, their needs, and their expectations.</p>
+    <p>It took years of learning, practicing, and paying attention to realize that caring for myself wasn't a luxury.</p>
+    <p>It was a necessity.</p>
+    <p>And that realization changed how I approached my life.</p>
+    <p>I originally created this course in 2020, during a time when so many people were facing uncertainty, isolation, and a profound shift in their everyday lives.</p>
+    <p>I kept thinking about the helpers, the caregivers, and the people who were so busy holding everything together.</p>
+    <p>Who was taking care of them?</p>
+    <p>That question stayed with me.</p>
+    <p>And while the world has changed since then, the importance of caring for ourselves hasn't.</p>
+    <p>I created these 21 days to share some of the practices, reflections, and lessons that have helped me develop a more loving relationship with myself.</p>
+    <p>Not because I have everything figured out.</p>
+    <p>But because I know how meaningful it can be to begin showing up for yourself in small, consistent ways.</p>
+    <p class="quote">“The most important relationship I will ever have is the one I have with myself.”</p>
+    <p>I'd love to help you explore what that relationship can look like for you.</p>
+    <p class="signoff">With love,</p>
+    <p class="signoff">Anna x</p>
+  </div>
+</section>
+
+<section class="shell">
   <div class="wrap">
-    <h2>A buffer for the holidays. A fresh start for the new year.</h2>
-    <div class="grid">
-      <div class="way"><h3>Now, as the season heats up</h3><p>Reach for a few minutes of breathing, a boundary, or a single priority when the gatherings, expectations, and to-do lists pile up.</p></div>
-      <div class="way"><h3>In the in-between</h3><p>The days between the holidays and the new year feel quiet and strange. Use them to honor the year you had and clear a little space, one drawer at a time.</p></div>
-      <div class="way"><h3>Into January</h3><p>Begin the year from a steadier place. Not a list of resolutions, but a reflex of care you have already been building. Return to any day whenever you need it.</p></div>
+    <div class="narrow">
+      <h2>An early invitation, just for you</h2>
+      <p>Before I release the updated version of this course to the wider public in 2027, I'm inviting early participants to experience it.</p>
+      <p>I'd love for you to explore the lessons, try the practices that speak to you, and share your honest thoughts about the experience.</p>
+      <p>What resonates?</p>
+      <p>What feels useful?</p>
+      <p>What could be clearer or better?</p>
+      <p>Your feedback will help me shape the course before its broader release.</p>
+      <p>And as a thank-you for joining at this early stage, I'm offering a special price.</p>
     </div>
-  </div>
-</section>
-
-<section class="how">
-  <div class="wrap">
-    <h2>Built to fit a full life</h2>
-    <div class="grid">
-      <div class="item"><h3>Access all 21 days immediately</h3><p>The whole course opens when you join. Go through it at your own pace, 21 days in a row or here and there when you need to renew your energy.</p></div>
-      <div class="item"><h3>Take what works</h3><p>Nothing is required. Try many prompts or just one. Even small gestures build the habit.</p></div>
-      <div class="item"><h3>Guided by Anna</h3><p>A guided breathing track, a stretching video, journaling prompts, and a note from Anna in every lesson.</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap anna">
-    <blockquote>The most important relationship I will ever have is the one I have with myself.</blockquote>
-    <p>Anna created this course in 2020, wondering how many of the helpers were caring for themselves as well as they cared for others. It grew from her own years of learning to turn her attention inward, and from her work as a breathworker since 2010.</p>
-    <p>New habits take time. With every small rep, a new way of caring for yourself moves closer to becoming a fixture in your life.</p>
-  </div>
-</section>
-
-<section class="join" id="join">
-  <div class="wrap">
-    <h2>Be among the first to take the new course.</h2>
-    <p>Anna is releasing a new version of this course in 2027, and she wants it tested by people who will tell her the truth. Join early, work through it at your own pace, and let her know what helped and what fell flat.</p>
     <div class="prices">
-      <div class="way"><h3>Pre-Black Friday</h3><p class="amt">$27</p><p>Early tester access for Anna's network. Get a first glimpse of the new course and help shape the final launch.</p></div>
-      <div class="way"><h3>Black Friday launch</h3><p class="amt">$47</p><p>Exclusive to Anna's community, to help with holiday stress.</p></div>
+      <article class="price-card featured">
+        <h3>Pre–Black Friday early access</h3>
+        <p class="price">$27</p>
+        <p class="price-sub">Early tester price</p>
+        <p>Experience the 21-day self-care course at the special early-access price.</p>
+      </article>
+      <article class="price-card later">
+        <h3>Black Friday launch price</h3>
+        <p class="price">$47</p>
+        <p>The next announced price when the course is offered to Anna's wider community.</p>
+      </article>
     </div>
-    <p class="fine">The price goes up when the course opens to the general public in 2027.</p>
-    <div class="guarantee"><h3>Try it risk-free through January 1</h3><p>Work through the course during the busiest stretch of the season. If it isn't right for you, email Anna by January 1 and tell her honestly why, and you'll get your money back. Your candor is the point. It helps her make the final version better for everyone who comes after you.</p></div>
-    <a class="btn" href="#" id="signup-link">Join as an early tester for $27</a>
-    <p class="note" style="color:var(--muted)">Questions? Email <a href="mailto:anna@annabrookehealing.com">anna@annabrookehealing.com</a></p>
+    <p class="narrow">The price is expected to rise again with the public release in 2027.</p>
+    <div class="narrow offer">
+      <h3>Your early-access invitation includes</h3>
+      <ul>
+        <li>The complete 21-day self-care course.</li>
+        <li>Daily reflections and self-care invitations.</li>
+        <li>A guided five-minute breathing track.</li>
+        <li>A gentle stretching video with Anna.</li>
+        <li>Journaling prompts and reflective exercises.</li>
+        <li>The opportunity to share feedback and help shape the public release.</li>
+      </ul>
+      <p>You'll be able to log in to the online course immediately after purchase. All 21 days will be available from the start.</p>
+    </div>
+    <p class="section-cta"><a class="btn btn-rust" href="#">Get instant access for $27</a></p>
   </div>
 </section>
+
+<section class="sand">
+  <div class="wrap narrow">
+    <h2>Try it risk-free through January 1, 2027</h2>
+    <p>I want you to feel comfortable exploring this course.</p>
+    <p>Spend time with the lessons and try the practices that speak to you.</p>
+    <p>If you discover that the course isn't right for you, simply email me by January 1, 2027, and let me know why.</p>
+    <p>I'll refund your purchase.</p>
+    <p>Your honest feedback is appreciated, and I'd rather you feel good about your decision to explore this work.</p>
+    <p class="section-cta"><a class="btn btn-rust" href="#">Get instant access for $27</a></p>
+  </div>
+</section>
+
+<section class="sand">
+  <div class="wrap narrow">
+    <h2>A few things you may be wondering</h2>
+    <h3>How do I access the course after purchasing?</h3>
+    <p>You'll be able to log in to the online course immediately after purchase. All 21 days will be available for you to explore from the start. There's no need to wait for lessons to arrive by email.</p>
+    <h3>Do I have to complete the course in 21 consecutive days?</h3>
+    <p>No. The entire course is available when you join, so you're free to move through it at your own pace. Take one lesson a day or revisit the practices when you need them.</p>
+    <h3>Do I need any experience with breathwork or self-care practices?</h3>
+    <p>No. The course begins with simple invitations to notice your thoughts, energy, and daily habits. The breathing and movement practices are introduced in accessible ways, and you can adapt or skip anything that doesn't feel right for you.</p>
+    <h3>Do I have to complete every exercise?</h3>
+    <p>Not at all. Every practice is optional. The intention is to explore what caring for yourself can look like, rather than complete another demanding list of tasks.</p>
+    <h3>How much time will I need?</h3>
+    <p>It varies depending on the practice. Some exercises take just a few minutes, like the guided five-minute breathing session. Others, like stretching, journaling, or clearing a space, may invite you to spend more time.</p>
+    <p>There's no need to rush.</p>
+    <h3>Is this a religious or spiritual course?</h3>
+    <p>The course includes both practical self-care activities and spiritual reflections. Some later lessons explore intuition, the heart, gratitude, and prayer.</p>
+    <p>You're welcome to engage with what feels meaningful to you and leave aside what doesn't.</p>
+    <h3>What does being an early tester mean?</h3>
+    <p>You'll be among the first to experience the updated course before its wider public release.</p>
+    <p>Anna welcomes honest feedback about what helped, what resonated, and what might be improved.</p>
+    <h3>What if the course isn't right for me?</h3>
+    <p>Simply email <a class="mail" href="mailto:anna@annabrookehealing.com">anna@annabrookehealing.com</a> by January 1, 2027, and explain why it wasn't right for you.</p>
+    <p>Anna will refund your purchase.</p>
+  </div>
+</section>
+
+<section class="final rust">
+  <div class="wrap narrow">
+    <h2>A little care for yourself can begin today.</h2>
+    <p>You don't need to wait for the holidays to pass.</p>
+    <p>You don't need to wait until your schedule opens up.</p>
+    <p>And you don't need to become a different version of yourself before you deserve care.</p>
+    <p>You can begin right where you are.</p>
+    <p>With one breath.</p>
+    <p>One small action.</p>
+    <p>One moment of listening.</p>
+    <p>And then another.</p>
+    <p class="emph">Your relationship with yourself is worth tending.</p>
+    <a class="btn btn-sand" href="#">Get instant access for $27</a>
+    <p class="micro">Log in immediately after purchase · All 21 days available · Move at your own pace</p>
+    <p>Questions? Email <a class="mail" href="mailto:anna@annabrookehealing.com">anna@annabrookehealing.com</a></p>
+  </div>
+</section>
+</main>
 
 <footer>&copy; Anna Brooke Healing</footer>
 
