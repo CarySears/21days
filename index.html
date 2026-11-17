@@ -37,7 +37,10 @@ section{padding:80px 0}
 @keyframes breathe{0%,100%{transform:scale(.92);opacity:.75}50%{transform:scale(1.06);opacity:1}}
 @media (prefers-reduced-motion:reduce){.hero::before{animation:none}html{scroll-behavior:auto}}
 .hero .wrap{position:relative}
-.brand{font-family:Inter,sans-serif;font-size:15px;color:var(--sand);margin-bottom:28px}
+.site-header{background:#fff;border-bottom:1px solid #EADBC6;padding:10px 0}
+.site-header .wrap{display:flex;align-items:center}
+.logo{display:inline-flex;line-height:0}
+.logo img{display:block;height:124px;width:auto}
 .hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:700;max-width:14ch}
 .hero p.lead{font-size:1.3rem;color:#F1DCC8;max-width:34em}
 .btn{display:inline-block;font-family:Inter,sans-serif;font-weight:600;font-size:17px;text-decoration:none;background:var(--coral);color:#2B1A14;padding:16px 30px;border-radius:999px;transition:background .2s}
@@ -95,22 +98,30 @@ footer{padding:34px 0;font-family:Inter,sans-serif;font-size:14px;color:var(--mu
 @media (max-width:760px){
   body{font-size:18px} section{padding:56px 0}
   .grid,.weeks,.how .grid,.buffer .grid,.prices{grid-template-columns:1fr}
-  .hero{padding:64px 0 90px} .brand{margin-bottom:24px}
+  .hero{padding:64px 0 90px}
+  .logo img{height:92px}
 }
 </style>
 </head>
 <body>
 
-<header class="hero">
+<header class="site-header">
   <div class="wrap">
-    <div class="brand">Anna Brooke Healing</div>
+    <a class="logo" href="./">
+      <img src="assets/anna-brooke-logo.webp" alt="Anna Brooke — movement, breath, healing" width="640" height="403">
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
     <div class="badge">Pre-Black Friday: $27 early tester access</div>
     <h1>Tend your inner fire.</h1>
     <p class="lead">The new and improved 21-day self-care course, opening first to Anna's network. Start the moment you join, move at your own pace, and use it as a buffer through the holidays and a fresh start in the new year.</p>
     <a class="btn" href="#join">Start the 21 days</a>
     <p class="note">For Anna's network only. Test-drive the course, share honest feedback, and try it risk-free through January 1.</p>
   </div>
-</header>
+</section>
 
 <section>
   <div class="wrap call">
