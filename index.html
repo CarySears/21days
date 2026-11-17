@@ -37,10 +37,15 @@ section{padding:80px 0}
 @keyframes breathe{0%,100%{transform:scale(.92);opacity:.75}50%{transform:scale(1.06);opacity:1}}
 @media (prefers-reduced-motion:reduce){.hero::before{animation:none}html{scroll-behavior:auto}}
 .hero .wrap{position:relative}
-.site-header{background:#fff;border-bottom:1px solid #EADBC6;padding:10px 0}
-.site-header .wrap{display:flex;align-items:center}
-.logo{display:inline-flex;line-height:0}
-.logo img{display:block;height:124px;width:auto}
+.site-header{background:#134C51}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:82px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#F7F1EA;min-width:0}
+.logo-mark{position:relative;width:140px;height:54px;overflow:hidden;flex:none}
+.logo-filter{position:absolute;width:0;height:0;overflow:hidden}
+.logo-mark img{position:absolute;width:172px;height:108px;max-width:none;left:-16px;top:-7px;filter:url(#logo-knockout)}
+.logo-name{font-family:"Playfair Display",Georgia,serif;font-size:18px;font-weight:500;line-height:1;white-space:nowrap}
+.header-cta{flex:none;display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 16px;border-radius:999px;background:#ED6E4F;color:#FBF6F1;font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15px;line-height:1;text-decoration:none}
+.header-cta:hover{background:#E07A52}
 .hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:700;max-width:14ch}
 .hero p.lead{font-size:1.3rem;color:#F1DCC8;max-width:34em}
 .btn{display:inline-block;font-family:Inter,sans-serif;font-weight:600;font-size:17px;text-decoration:none;background:var(--coral);color:#2B1A14;padding:16px 30px;border-radius:999px;transition:background .2s}
@@ -99,17 +104,27 @@ footer{padding:34px 0;font-family:Inter,sans-serif;font-size:14px;color:var(--mu
   body{font-size:18px} section{padding:56px 0}
   .grid,.weeks,.how .grid,.buffer .grid,.prices{grid-template-columns:1fr}
   .hero{padding:64px 0 90px}
-  .logo img{height:92px}
+  .site-header .wrap{min-height:58px;gap:8px;padding-left:12px;padding-right:12px}
+  .logo{gap:6px;flex:1;min-width:0}
+  .logo-mark{width:56px;height:22px}
+  .logo-mark img{width:69px;height:44px;left:-6px;top:-3px}
+  .logo-name{font-size:13px;overflow:hidden;text-overflow:ellipsis}
+  .header-cta{height:30px;padding:0 8px;font-size:11px}
 }
 </style>
 </head>
 <body>
 
+<svg class="logo-filter" aria-hidden="true"><filter id="logo-knockout" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.941  0 0 0 0 0.408  0 0 0 0 0.282  0 0 -1.393 0 1.393"></feColorMatrix></filter></svg>
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="./">
-      <img src="assets/anna-brooke-logo.webp" alt="Anna Brooke — movement, breath, healing" width="640" height="403">
+      <span class="logo-mark">
+        <img src="assets/anna-brooke-logo.webp" alt="" width="640" height="403">
+      </span>
+      <span class="logo-name">Anna Brooke Healing</span>
     </a>
+    <a class="header-cta" href="#join">Reserve your spot</a>
   </div>
 </header>
 
