@@ -111,12 +111,12 @@ section:has(+ #checkout){padding-bottom:0}
   .hero h1{font-size:clamp(2.4rem,9vw,3.1rem)}
   .hero h2{font-size:1.28rem}
   .hero::before{background:radial-gradient(ellipse 18% 55% at 0% 50%,rgba(242,237,226,.28) 0%,rgba(206,143,41,.22) 30%,rgba(155,77,50,0) 62%),radial-gradient(ellipse 18% 55% at 100% 50%,rgba(242,237,226,.28) 0%,rgba(206,143,41,.22) 30%,rgba(155,77,50,0) 62%)}
-  .site-header .wrap{flex-wrap:wrap;min-height:0;padding-top:12px;padding-bottom:12px;row-gap:10px}
-  .site-header .btn{margin-left:auto}
-  .logo{gap:8px}
-  .logo-mark{width:104px;height:40px}
-  .logo-mark img{width:127px;height:80px;left:-12px;top:-5px}
-  .logo-name{font-size:16px}
+  .site-header .wrap{flex-wrap:nowrap;align-items:center;gap:8px;min-height:64px;padding:10px 12px}
+  .site-header .btn{flex:0 0 auto;min-height:44px;margin-left:0;padding:8px 12px;font-size:13px;line-height:1.15;white-space:nowrap}
+  .logo{gap:6px;min-width:0;flex:1 1 auto}
+  .logo-mark{width:64px;height:26px}
+  .logo-mark img{width:79px;height:50px;left:-7px;top:-3px}
+  .logo-name{font-size:13px;overflow:hidden;text-overflow:ellipsis}
 }
 </style>
 </head>
