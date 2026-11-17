@@ -75,7 +75,8 @@ section{padding:72px 0}
 footer{padding:34px 0;font-family:Inter,system-ui,sans-serif;font-size:14px;text-align:center;color:var(--rust)}
 
 .site-header{background:#fff;border-bottom:1px solid #EADBC6}
-.site-header .wrap{display:flex;align-items:center;min-height:82px}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:82px}
+.site-header .btn{flex:none}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#3A2A22}
 .logo-mark{position:relative;width:140px;height:54px;overflow:hidden;flex:none}
 .logo-mark img{position:absolute;width:172px;height:108px;max-width:none;left:-16px;top:-7px}
@@ -92,6 +93,8 @@ footer{padding:34px 0;font-family:Inter,system-ui,sans-serif;font-size:14px;text
   body{font-size:18px}
   section{padding:48px 0}
   .hero{padding:40px 0 48px}
+  .site-header .wrap{flex-wrap:wrap;min-height:0;padding-top:12px;padding-bottom:12px;row-gap:10px}
+  .site-header .btn{margin-left:auto}
   .logo{gap:8px}
   .logo-mark{width:104px;height:40px}
   .logo-mark img{width:127px;height:80px;left:-12px;top:-5px}
@@ -109,6 +112,7 @@ footer{padding:34px 0;font-family:Inter,system-ui,sans-serif;font-size:14px;text
       </span>
       <span class="logo-name">Anna Brooke Healing</span>
     </a>
+    <a class="btn btn-rust" href="#">Get instant access for $27</a>
   </div>
 </header>
 
