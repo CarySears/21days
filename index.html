@@ -82,7 +82,7 @@ footer{padding:34px 0;font-family:Inter,system-ui,sans-serif;font-size:14px;text
 .logo-mark img{position:absolute;width:172px;height:108px;max-width:none;left:-16px;top:-7px}
 .logo-name{font-family:"Playfair Display",Georgia,serif;font-size:18px;font-weight:500;line-height:1;white-space:nowrap}
 .hero{position:relative;overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;z-index:0;left:50%;top:52%;width:min(760px,96%);height:min(680px,96%);transform:translate(-50%,-50%);pointer-events:none;background:radial-gradient(ellipse at center,rgba(242,237,226,.34) 0%,rgba(206,143,41,.28) 22%,rgba(155,77,50,0) 70%);animation:hero-ember 16s ease-in-out infinite}
+.hero::before{content:"";position:absolute;z-index:0;inset:0;pointer-events:none;background:radial-gradient(ellipse 34% 72% at 0% 54%,rgba(242,237,226,.36) 0%,rgba(206,143,41,.30) 26%,rgba(155,77,50,0) 62%),radial-gradient(ellipse 34% 72% at 100% 54%,rgba(242,237,226,.36) 0%,rgba(206,143,41,.30) 26%,rgba(155,77,50,0) 62%);animation:hero-ember 16s ease-in-out infinite}
 .hero .wrap{position:relative;z-index:1}
 @keyframes hero-ember{0%,100%{opacity:.9}50%{opacity:1}}
 @media (prefers-reduced-motion:reduce){.hero::before{animation:none;opacity:1}}
@@ -106,6 +106,7 @@ footer{padding:34px 0;font-family:Inter,system-ui,sans-serif;font-size:14px;text
   .hero{padding:40px 0 48px}
   .hero h1{font-size:clamp(2.4rem,9vw,3.1rem)}
   .hero h2{font-size:1.28rem}
+  .hero::before{background:radial-gradient(ellipse 18% 55% at 0% 50%,rgba(242,237,226,.28) 0%,rgba(206,143,41,.22) 30%,rgba(155,77,50,0) 62%),radial-gradient(ellipse 18% 55% at 100% 50%,rgba(242,237,226,.28) 0%,rgba(206,143,41,.22) 30%,rgba(155,77,50,0) 62%)}
   .site-header .wrap{flex-wrap:wrap;min-height:0;padding-top:12px;padding-bottom:12px;row-gap:10px}
   .site-header .btn{margin-left:auto}
   .logo{gap:8px}
