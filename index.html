@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tend Your Inner Fire | 21 Days of Self-Care with Anna Brooke</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* Brand tokens: swap these hex values for Anna's exact palette */
+:root{
+  --rust:#9C4A2F; --coral:#D9785A; --shell:#FBF4EC; --sand:#EADBC6; --ochre:#C9923A; --sea:#4F7F7C; --sky:#A9C7D6;
+  --ink:#3A2A22; --ember:#2B1A14; --bg:var(--shell); --card:#FFFFFF; --muted:#6E5A4E;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#1F1511;--card:#2A1D17;--ink:#F3E7DA;--muted:#C9B6A5;--sand:#3A2A22}
+}
+:root[data-theme="dark"]{--bg:#1F1511;--card:#2A1D17;--ink:#F3E7DA;--muted:#C9B6A5;--sand:#3A2A22}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:19px;line-height:1.65}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.15;margin:0 0 .5em;font-weight:500}
+p{margin:0 0 1em;max-width:62ch}
+.sans{font-family:Inter,system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+section{padding:80px 0}
+
+/* Hero: the one memorable thing, a slowly breathing ember */
+.hero{background:var(--ember);color:#FBEBDD;position:relative;overflow:hidden;padding:96px 0 110px}
+.hero::before{content:"";position:absolute;left:50%;bottom:-260px;width:760px;height:760px;margin-left:-380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(217,120,90,.65) 0%,rgba(201,146,58,.30) 32%,rgba(156,74,47,0) 66%);
+  animation:breathe 7s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(.92);opacity:.75}50%{transform:scale(1.06);opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero::before{animation:none}html{scroll-behavior:auto}}
+.hero .wrap{position:relative}
+.brand{font-family:Inter,sans-serif;font-size:15px;color:var(--sand);margin-bottom:28px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:700;max-width:14ch}
+.hero p.lead{font-size:1.3rem;color:#F1DCC8;max-width:34em}
+.btn{display:inline-block;font-family:Inter,sans-serif;font-weight:600;font-size:17px;text-decoration:none;background:var(--coral);color:#2B1A14;padding:16px 30px;border-radius:999px;transition:background .2s}
+.btn:hover{background:var(--ochre)}
+.note{font-family:Inter,sans-serif;font-size:14px;margin-top:16px;color:var(--sand)}
+
+.badge{display:inline-block;font-family:Inter,sans-serif;font-weight:600;font-size:14px;background:var(--ochre);color:#2B1A14;padding:6px 16px;border-radius:999px;margin-bottom:28px}
+.buffer .grid{grid-template-columns:repeat(3,1fr)}
+.prices{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:760px;margin:32px auto 20px;text-align:left}
+.amt{font-family:"Playfair Display",Georgia,serif;font-size:2.8rem;font-weight:700;line-height:1;margin:0 0 .3em}
+.prices .way p{max-width:none}
+.guarantee{max-width:760px;margin:0 auto 36px;text-align:left;background:var(--card);border-left:6px solid var(--sea);border-radius:4px 18px 4px 18px;padding:26px 30px}
+.guarantee h3{font-size:1.35rem}.guarantee p{margin:0;color:var(--muted);font-size:17px}
+.fine{font-family:Inter,sans-serif;font-size:14px;color:var(--muted);margin:0 auto 28px!important}
+/* Call */
+.call{max-width:720px}
+.call h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+.call .big{font-family:"Playfair Display",serif;font-style:italic;font-size:1.5rem;color:var(--rust)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .call .big{color:var(--coral)}}
+
+/* Four ways */
+.ways{background:var(--sand)}
+.ways h2,.arc h2,.how h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1em}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.way{background:var(--card);padding:30px;border-left:6px solid var(--coral);border-radius:4px 18px 4px 18px}
+.way:nth-child(2){border-color:var(--sea)}.way:nth-child(3){border-color:var(--ochre)}.way:nth-child(4){border-color:var(--rust)}
+.way h3{font-size:1.45rem}
+.way p{margin:0;color:var(--muted);font-size:17px}
+
+/* Arc: a real sequence, so numbered weeks are earned */
+.weeks{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.week{border-top:4px solid var(--rust);padding-top:18px}
+.week:nth-child(2){border-color:var(--ochre)}.week:nth-child(3){border-color:var(--sea)}
+.week h3{font-size:1.35rem}
+.week .days{font-family:Inter,sans-serif;font-size:14px;color:var(--muted);margin-bottom:10px}
+.week ul{margin:0;padding-left:1.1em;color:var(--muted);font-size:17px}
+.week li{margin-bottom:.3em}
+
+/* How */
+.how{background:var(--ember);color:#FBEBDD}
+.how .grid{grid-template-columns:repeat(3,1fr)}
+.how .item{padding:6px 0}
+.how h3{font-size:1.3rem;color:var(--coral)}
+.how p{color:#F1DCC8;font-size:17px}
+
+/* Anna + CTA */
+.anna{max-width:720px}
+.anna blockquote{margin:0 0 1.2em;font-family:"Playfair Display",serif;font-style:italic;font-size:1.6rem;line-height:1.35;color:var(--rust)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .anna blockquote{color:var(--coral)}}
+.join{background:var(--sand);text-align:center}
+.join h2{font-size:clamp(2rem,5vw,3.2rem)}
+.join p{margin-left:auto;margin-right:auto}
+footer{padding:34px 0;font-family:Inter,sans-serif;font-size:14px;color:var(--muted);text-align:center}
+
+@media (max-width:760px){
+  body{font-size:18px} section{padding:56px 0}
+  .grid,.weeks,.how .grid,.buffer .grid,.prices{grid-template-columns:1fr}
+  .hero{padding:64px 0 90px} .brand{margin-bottom:24px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">Anna Brooke Healing</div>
+    <div class="badge">Pre-Black Friday: $27 early tester access</div>
+    <h1>Tend your inner fire.</h1>
+    <p class="lead">The new and improved 21-day self-care course, opening first to Anna's network. Start the moment you join, move at your own pace, and use it as a buffer through the holidays and a fresh start in the new year.</p>
+    <a class="btn" href="#join">Start the 21 days</a>
+    <p class="note">For Anna's network only. Test-drive the course, share honest feedback, and try it risk-free through January 1.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap call">
+    <h2>Does your fire feel low as the year closes?</h2>
+    <p>This stretch of the calendar asks a lot. Gatherings, expectations, year-end deadlines, and the pressure to feel festive all at once. Many of us arrive at the finish line running on embers.</p>
+    <p class="big">Your light has not gone out. It may just need tending.</p>
+    <p>Listen for the call to slow down, take stock of the year you have lived, and give your attention back to yourself. That is where kindling the light within begins.</p>
+  </div>
+</section>
+
+<section class="ways">
+  <div class="wrap">
+    <h2>Four ways to meet this season with care</h2>
+    <div class="grid">
+      <div class="way"><h3>Honor the year you had</h3><p>The wins, the losses, and everything in between. Pause long enough to acknowledge what you carried before you step into what comes next.</p></div>
+      <div class="way"><h3>Protect your peace</h3><p>Insulate yourself from holiday stress and the moods and opinions swirling around you. Practice the small boundaries that keep your inner space calm.</p></div>
+      <div class="way"><h3>Protect your time</h3><p>Choose one priority at a time instead of juggling all of them. Your attention is a form of energy, and you get to decide where it goes.</p></div>
+      <div class="way"><h3>Tend your inner fire</h3><p>Breathe, move, clear a little space, and listen to your heart. Simple daily acts that rekindle the light within.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="arc">
+  <div class="wrap">
+    <h2>What is inside the 21 days</h2>
+    <div class="weeks">
+      <div class="week">
+        <h3>Part one: Ground</h3>
+        <div class="days">Days 1 to 7</div>
+        <ul>
+          <li>Notice where your energy goes</li>
+          <li>See how thoughts and words shape your day</li>
+          <li>Learn self-care versus self-soothing</li>
+          <li>Come home to your breath</li>
+          <li>Move your body for the pleasure of it</li>
+        </ul>
+      </div>
+      <div class="week">
+        <h3>Part two: Clear</h3>
+        <div class="days">Days 8 to 14</div>
+        <ul>
+          <li>Stretch with a gentle practice from Anna</li>
+          <li>Make yourself the one priority</li>
+          <li>Surrender and sanitize</li>
+          <li>Clear one small space at a time</li>
+          <li>Let go, and see your home as a mirror</li>
+        </ul>
+      </div>
+      <div class="week">
+        <h3>Part three: Kindle</h3>
+        <div class="days">Days 15 to 21</div>
+        <ul>
+          <li>Take a well-deserved break</li>
+          <li>Release, invite, and give thanks</li>
+          <li>Return to your body</li>
+          <li>Listen to your heart</li>
+          <li>Close with gratitude and a prayer</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ways buffer">
+  <div class="wrap">
+    <h2>A buffer for the holidays. A fresh start for the new year.</h2>
+    <div class="grid">
+      <div class="way"><h3>Now, as the season heats up</h3><p>Reach for a few minutes of breathing, a boundary, or a single priority when the gatherings, expectations, and to-do lists pile up.</p></div>
+      <div class="way"><h3>In the in-between</h3><p>The days between the holidays and the new year feel quiet and strange. Use them to honor the year you had and clear a little space, one drawer at a time.</p></div>
+      <div class="way"><h3>Into January</h3><p>Begin the year from a steadier place. Not a list of resolutions, but a reflex of care you have already been building. Return to any day whenever you need it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <h2>Built to fit a full life</h2>
+    <div class="grid">
+      <div class="item"><h3>Access all 21 days immediately</h3><p>The whole course opens when you join. Go through it at your own pace, 21 days in a row or here and there when you need to renew your energy.</p></div>
+      <div class="item"><h3>Take what works</h3><p>Nothing is required. Try many prompts or just one. Even small gestures build the habit.</p></div>
+      <div class="item"><h3>Guided by Anna</h3><p>A guided breathing track, a stretching video, journaling prompts, and a note from Anna in every lesson.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap anna">
+    <blockquote>The most important relationship I will ever have is the one I have with myself.</blockquote>
+    <p>Anna created this course in 2020, wondering how many of the helpers were caring for themselves as well as they cared for others. It grew from her own years of learning to turn her attention inward, and from her work as a breathworker since 2010.</p>
+    <p>New habits take time. With every small rep, a new way of caring for yourself moves closer to becoming a fixture in your life.</p>
+  </div>
+</section>
+
+<section class="join" id="join">
+  <div class="wrap">
+    <h2>Be among the first to take the new course.</h2>
+    <p>Anna is releasing a new version of this course in 2027, and she wants it tested by people who will tell her the truth. Join early, work through it at your own pace, and let her know what helped and what fell flat.</p>
+    <div class="prices">
+      <div class="way"><h3>Pre-Black Friday</h3><p class="amt">$27</p><p>Early tester access for Anna's network. Get a first glimpse of the new course and help shape the final launch.</p></div>
+      <div class="way"><h3>Black Friday launch</h3><p class="amt">$47</p><p>Exclusive to Anna's community, to help with holiday stress.</p></div>
+    </div>
+    <p class="fine">The price goes up when the course opens to the general public in 2027.</p>
+    <div class="guarantee"><h3>Try it risk-free through January 1</h3><p>Work through the course during the busiest stretch of the season. If it isn't right for you, email Anna by January 1 and tell her honestly why, and you'll get your money back. Your candor is the point. It helps her make the final version better for everyone who comes after you.</p></div>
+    <a class="btn" href="#" id="signup-link">Join as an early tester for $27</a>
+    <p class="note" style="color:var(--muted)">Questions? Email <a href="mailto:anna@annabrookehealing.com">anna@annabrookehealing.com</a></p>
+  </div>
+</section>
+
+<footer>&copy; Anna Brooke Healing</footer>
+
+</body>
+</html>
