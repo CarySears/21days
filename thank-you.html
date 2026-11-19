@@ -147,6 +147,19 @@ section{padding:72px 0}
 .form-embed{background:var(--paper);border:1px solid rgba(155,77,50,.12);border-radius:20px;padding:8px;overflow:hidden}
 .form-embed iframe{width:100%;height:893px;border:none;display:block}
 
+.plan-toggle input{position:absolute;opacity:0;pointer-events:none}
+.tab-labels{display:flex;gap:16px;margin-bottom:24px}
+.tab-labels label{flex:1;cursor:pointer;background:var(--paper);border:2px solid rgba(155,77,50,.14);border-radius:18px;padding:20px 22px;transition:border-color .15s ease,background .15s ease;text-align:center}
+.tab-labels label .t-name{font-family:"Playfair Display",serif;font-weight:600;font-size:1.1rem;color:var(--rust);display:block;margin-bottom:4px}
+.tab-labels label .t-price{font-family:Inter,sans-serif;font-weight:700;color:var(--coral);font-size:.95rem}
+.tab-labels label .t-save{font-family:Inter,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--paper);background:var(--coral);padding:2px 8px;border-radius:100px;margin-left:8px}
+#plan-single:checked ~ .tab-labels label[for="plan-single"],
+#plan-both:checked ~ .tab-labels label[for="plan-both"]{border-color:var(--coral);background:var(--shell)}
+.panel{display:none}
+#plan-single:checked ~ .panel-single{display:block}
+#plan-both:checked ~ .panel-both{display:block}
+@media (max-width:560px){.tab-labels{flex-direction:column}}
+
 footer{padding:34px 0;font-family:Inter,system-ui,sans-serif;font-size:14px;text-align:center;color:var(--rust)}
 
 @media (max-width:760px){
@@ -366,26 +379,69 @@ footer{padding:34px 0;font-family:Inter,system-ui,sans-serif;font-size:14px;text
   <div class="wrap">
     <h2>Reserve your spot</h2>
     <p class="checkout-note">Choose one remaining workshop for $47, or both November 28 and December 19 for $80.</p>
-    <div class="form-embed">
-      <iframe
-        src="https://links.annabrookehealing.com/widget/form/QRZaeZRydUASAXFRIkJL"
-        style="width:100%;height:100%;border:none;border-radius:3px"
-        id="inline-QRZaeZRydUASAXFRIkJL"
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Single Workshop Enroll"
-        data-height="893"
-        data-layout-iframe-id="inline-QRZaeZRydUASAXFRIkJL"
-        data-form-id="QRZaeZRydUASAXFRIkJL"
-        data-cookie-consent="true"
-        data-cookie-consent-provider="auto"
-        title="Reserve your spot"
-      ></iframe>
+    
+    <div class="plan-toggle">
+      <input type="radio" name="plan" id="plan-single" checked>
+      <input type="radio" name="plan" id="plan-both">
+
+      <div class="tab-labels">
+        <label for="plan-single">
+          <span class="t-name">Single Workshop</span>
+          <span class="t-price">$47</span>
+        </label>
+        <label for="plan-both">
+          <span class="t-name">Both Workshops</span>
+          <span class="t-price">$80</span><span class="t-save">Save $14</span>
+        </label>
+      </div>
+
+      <div class="panel panel-single">
+        <div class="form-embed">
+          <iframe
+            src="https://links.annabrookehealing.com/widget/form/QRZaeZRydUASAXFRIkJL"
+            style="width:100%;height:100%;border:none;border-radius:3px"
+            id="inline-QRZaeZRydUASAXFRIkJL"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Single Workshop Enroll"
+            data-height="893"
+            data-layout-iframe-id="inline-QRZaeZRydUASAXFRIkJL"
+            data-form-id="QRZaeZRydUASAXFRIkJL"
+            data-cookie-consent="true"
+            data-cookie-consent-provider="auto"
+            title="Single Workshop Enrollment"
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="panel panel-both">
+        <div class="form-embed">
+          <iframe
+            src="https://links.annabrookehealing.com/widget/form/WEHA94UPyxhAvBRtk1ha"
+            style="width:100%;height:100%;border:none;border-radius:3px"
+            id="inline-WEHA94UPyxhAvBRtk1ha"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Both Workshops Enroll"
+            data-height="893"
+            data-layout-iframe-id="inline-WEHA94UPyxhAvBRtk1ha"
+            data-form-id="WEHA94UPyxhAvBRtk1ha"
+            data-cookie-consent="true"
+            data-cookie-consent-provider="auto"
+            title="Both Workshops Enrollment"
+          ></iframe>
+        </div>
+      </div>
     </div>
   </div>
 </section>
