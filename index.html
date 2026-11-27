@@ -64,6 +64,8 @@ section{padding:72px 0}
 .cols{display:grid;grid-template-columns:1fr;gap:28px}
 .pill-header{display:inline-block;background:rgba(242,237,226,.18);padding:8px 20px;border-radius:999px;margin-bottom:.5em}
 .prices{display:grid;grid-template-columns:1fr;gap:20px;margin:1.5em 0}
+.prices:has(> :only-child){grid-template-columns:1fr;max-width:36rem}
+.cards + .narrow{margin-top:3rem}
 .price-card{background:var(--sand);color:var(--rust);border-radius:18px;padding:28px}
 .price-card.featured{border:3px solid var(--rust)}
 .price-card.later{border-top:4px solid var(--ochre)}
@@ -132,22 +134,22 @@ section:has(+ #checkout){padding-bottom:0}
       </span>
       <span class="logo-name">Anna Brooke Healing</span>
     </a>
-    <a class="btn btn-rust" href="#checkout">Get instant access for $27</a>
+    <a class="btn btn-rust" href="#checkout">Get instant access for $47</a>
   </div>
 </header>
 
 <main>
 <section class="hero rust">
   <div class="wrap narrow">
-    <p class="eyebrow"><strong>PRE–BLACK FRIDAY · EARLY TESTER ACCESS · $27</strong></p>
+    <p class="eyebrow"><strong>BLACK FRIDAY SPECIAL · $47</strong></p>
     <h1>Tend your inner fire.</h1>
     <h2>A buffer for the holidays. A fresh start for the new year.</h2>
     <p>The new and improved 21-day self-care course from Anna Brooke.</p>
     <p>As the year draws to a close, give yourself a little space to breathe, take stock, and turn your attention back to yourself.</p>
     <p>Through simple daily invitations to breathe, move, reflect, clear space, and listen to your heart, you'll explore what it means to care for yourself in ways that fit your actual life.</p>
     <p>Start now, take what you need through the holidays, and carry the practice with you into the new year.</p>
-    <a class="btn btn-sand" href="#checkout" id="signup-link">Get instant access for $27</a>
-    <p class="micro">Log in immediately · All 21 days available · Move at your own pace</p>
+    <a class="btn btn-sand" href="#checkout" id="signup-link">Get instant access for $47</a>
+    <p class="micro">Log in immediately · All 21 days available · Both workshops included free</p>
   </div>
 </section>
 
@@ -285,7 +287,7 @@ section:has(+ #checkout){padding-bottom:0}
         <p class="invite">The invitation: Carry the practice of caring for yourself into the days ahead.</p>
       </article>
     </div>
-    <p class="section-cta"><a class="btn btn-rust" href="#checkout">Get instant access for $27</a></p>
+    <p class="section-cta"><a class="btn btn-rust" href="#checkout">Get instant access for $47</a></p>
   </div>
 </section>
 
@@ -385,42 +387,54 @@ section:has(+ #checkout){padding-bottom:0}
 <section class="shell">
   <div class="wrap">
     <div class="narrow">
-      <h2>Be among the first to experience the new course</h2>
-      <p>I'm preparing an updated version of this 21-day self-care course for a wider public release in 2027.</p>
-      <p>Before then, I'm opening it to my network at a special early tester price.</p>
-      <p>You'll receive immediate access to all 21 days, and I'd love for you to explore the lessons and tell me what you think.</p>
-      <p>What resonated?</p>
-      <p>What was useful?</p>
-      <p>What could be clearer or better?</p>
-      <p>Your honest feedback will help me shape the final public version.</p>
-      <p>And as a thank-you for joining at this early stage, I'm offering a special price.</p>
+      <p class="eyebrow">Included free with Inner Fire</p>
+      <h2>Both Coming Home workshops</h2>
+      <p>Coming Home is a monthly reconnection series with Anna. For Black Friday, both workshops are included free when you purchase Inner Fire.</p>
+      <p>Each gathering is a chance to step away from the noise and come back to yourself. The blend changes each time, drawn from breathwork, guided meditation, self-exploration, creative pauses, hands-on relaxation, and simple reset-and-reconnect practices.</p>
+      <p>You don't need any experience. The workshops meet you where you are.</p>
+    </div>
+    <div class="cards journey">
+      <article class="card">
+        <h3>November 28</h3>
+        <p>11:00 AM–12:30 PM ET.</p>
+        <p>A 90-minute live workshop on Zoom, included free.</p>
+      </article>
+      <article class="card">
+        <h3>December 19</h3>
+        <p>11:00 AM–12:30 PM ET.</p>
+        <p>A 90-minute live workshop on Zoom, included free.</p>
+      </article>
+      <article class="card">
+        <h3>Can't make it live?</h3>
+        <p>If you can't attend a live workshop, you'll receive the recording.</p>
+      </article>
+    </div>
+    <div class="narrow">
+      <h2>Black Friday special</h2>
+      <p>Inner Fire is $47 for Black Friday.</p>
+      <p>That includes the complete 21-day course, and both Coming Home workshops at no extra cost.</p>
     </div>
     <div class="prices">
       <article class="price-card featured">
-        <h3>Pre–Black Friday early access</h3>
-        <p class="price">$27</p>
-        <p class="price-sub"><strong>Early tester price</strong></p>
-        <p>Get the complete course now, before the Black Friday launch.</p>
-      </article>
-      <article class="price-card later">
-        <h3>Black Friday launch price</h3>
+        <h3>Black Friday special</h3>
         <p class="price">$47</p>
-        <p>The next announced price for Anna's wider community.</p>
+        <p class="price-sub"><strong>Inner Fire + both workshops</strong></p>
+        <p>The full 21-day course, with both Coming Home workshops included free.</p>
       </article>
     </div>
-    <p class="narrow">The price is expected to rise again when the course opens to the general public in 2027.</p>
     <div class="narrow offer">
-      <h3>Your $27 early access includes</h3>
+      <h3>Your $47 Black Friday access includes</h3>
       <ul>
         <li>Immediate login access to all 21 lessons.</li>
         <li>The freedom to move through the course at your own pace.</li>
         <li>A guided five-minute breathing track.</li>
         <li>A gentle stretching video with Anna.</li>
         <li>Journaling prompts and reflection exercises.</li>
-        <li>The opportunity to share feedback before the public release.</li>
+        <li>Both Coming Home workshops, November 28 and December 19, included free.</li>
+        <li>The recording of any live workshop you can't attend.</li>
       </ul>
     </div>
-    <p class="section-cta"><a class="btn btn-rust" href="#checkout">Get instant access for $27</a></p>
+    <p class="section-cta"><a class="btn btn-rust" href="#checkout">Get instant access for $47</a></p>
   </div>
 </section>
 
@@ -464,9 +478,10 @@ section:has(+ #checkout){padding-bottom:0}
     <p>There are both practical self-care exercises and spiritual reflections throughout the course.</p>
     <p>Some of the later lessons explore the heart, gratitude, inner guidance, and prayer.</p>
     <p>You're welcome to engage with what feels meaningful to you and leave aside what doesn't.</p>
-    <h3>What does being an early tester mean?</h3>
-    <p>You'll be among the first to experience this updated course before its wider public release in 2027.</p>
-    <p>I'd love to hear what you enjoyed, what you found helpful, and what could be improved.</p>
+    <h3>Are the Coming Home workshops really included?</h3>
+    <p>Yes. For Black Friday, both workshops are included free when you purchase Inner Fire: November 28 and December 19, 11:00 AM–12:30 PM ET.</p>
+    <h3>What if I can't make a live workshop?</h3>
+    <p>You'll receive the recording.</p>
     <h3>What if the course isn't right for me?</h3>
     <p>Simply email me at <a class="mail" href="mailto:anna@annabrookehealing.com">anna@annabrookehealing.com</a> by January 1, 2027, and let me know why.</p>
     <p>I'll refund your purchase.</p>
@@ -485,8 +500,8 @@ section:has(+ #checkout){padding-bottom:0}
     <p>Let these 21 days be a place to return to when the season asks a lot of you.</p>
     <p>And when the new year arrives, carry that practice with you.</p>
     <p class="invite">Your light has not gone out. It may just need tending.</p>
-    <a class="btn btn-sand" href="#checkout">Get instant access for $27</a>
-    <p class="micro">Instant access · Risk-free through January 1, 2027</p>
+    <a class="btn btn-sand" href="#checkout">Get instant access for $47</a>
+    <p class="micro">Instant access · Both workshops included · Risk-free through January 1, 2027</p>
     <p>Questions? Email <a class="mail" href="mailto:anna@annabrookehealing.com">anna@annabrookehealing.com</a></p>
   </div>
 </section>
