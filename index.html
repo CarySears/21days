@@ -15,6 +15,7 @@
   --shell:#F3D9D0;
   --sky:#A3B6E5;
   --sand:#F2EDE2;
+  --paper:#fbf8f2;
 }
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -121,6 +122,69 @@ section:has(+ #checkout){padding-bottom:0}
   .logo-mark{width:64px;height:26px}
   .logo-mark img{width:79px;height:50px;left:-7px;top:-3px}
   .logo-name{font-size:13px;overflow:hidden;text-overflow:ellipsis}
+  .host-editorial{flex-direction:column;text-align:center}
+  .paths-wrap{flex-direction:column}
+  .tide-row::before{display:none}
+  .path-card.featured{transform:none}
+}
+.label{font-family:Inter,system-ui,sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.section-title{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-style:italic;font-size:clamp(1.9rem,4vw,2.5rem);margin-bottom:16px}
+.section-lede{max-width:600px;font-size:1.08rem}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+.meta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:32px}
+.meta-chip{font-family:Inter,system-ui,sans-serif;font-size:.8rem;font-weight:500;background:rgba(155,77,50,.08);border:1px solid rgba(155,77,50,.2);padding:9px 16px;border-radius:100px;color:var(--rust)}
+.cta-note{font-family:Inter,system-ui,sans-serif;font-size:.85rem;margin-top:16px}
+.blend-wrap{display:flex;flex-direction:column;align-items:center;gap:56px;margin-top:48px}
+.mandala{position:relative;width:480px;height:480px;max-width:100%;flex-shrink:0}
+.mandala-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:128px;height:128px;border-radius:50%;background:var(--rust);color:var(--sand);display:flex;align-items:center;justify-content:center;text-align:center;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:600;font-size:1.1rem;box-shadow:0 14px 34px rgba(155,77,50,.28);z-index:2}
+.mandala-node{position:absolute;width:118px;transform:translate(-50%,-50%);text-align:center;z-index:1}
+.mandala-node .dot{width:52px;height:52px;border-radius:50%;margin:0 auto 10px;background:var(--shell);border:1.5px solid var(--coral);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:1.3rem;color:var(--rust)}
+.mandala-node span{font-family:Inter,system-ui,sans-serif;font-size:.8rem;font-weight:600;color:var(--rust)}
+.mandala-lines{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
+.mandala-lines line{stroke:var(--sky);stroke-width:1.5;stroke-dasharray:4 6;opacity:.6}
+.blend-list{display:none}
+.tide-row{display:flex;justify-content:center;align-items:flex-start;gap:0;margin-top:48px;position:relative}
+.tide-row::before{content:"";position:absolute;top:34px;left:12%;right:12%;height:1px;background:repeating-linear-gradient(90deg, rgba(242,237,226,.4) 0 8px, transparent 8px 16px);z-index:0}
+.tide-node{flex:1;text-align:center;position:relative;z-index:1;max-width:200px}
+.tide-node .moon{width:68px;height:68px;border-radius:50%;margin:0 auto 16px;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.tide-node .month{font-family:Inter,system-ui,sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);font-weight:700;margin-bottom:4px}
+.tide-node .day{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:1.8rem}
+.tide-node .status{font-family:Inter,system-ui,sans-serif;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;margin-top:8px;color:var(--sky)}
+.tide-node.is-past{opacity:.5}
+.tide-node.is-past .status{opacity:1}
+.paths-wrap{display:flex;gap:28px;margin-top:48px;align-items:center;flex-wrap:wrap;justify-content:center}
+.path-card{flex:1 1 260px;background:var(--paper);border:1px solid rgba(155,77,50,.14);border-radius:22px;padding:30px}
+.path-card .path-label{color:var(--ochre);margin-bottom:10px}
+.path-card h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:1.3rem;margin-bottom:6px}
+.path-card .amount{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:2.2rem;color:var(--coral);margin:10px 0 4px}
+.path-card p.desc{font-size:.95rem;margin:10px 0 0}
+.path-card.featured{flex:1.15 1 300px;background:var(--rust);color:var(--sand);transform:translateY(-14px);box-shadow:0 24px 50px rgba(155,77,50,.25);position:relative}
+.path-card.featured .amount{color:var(--shell)}
+.path-card.featured .path-label{color:var(--sky)}
+.path-card.featured .badge{position:absolute;top:-14px;right:26px;background:var(--coral);color:var(--paper);font-family:Inter,system-ui,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 12px;border-radius:100px}
+.host-editorial{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.host-photo{width:150px;height:150px;border-radius:50%;flex-shrink:0;background:var(--shell);border:1.5px solid var(--rust);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.host-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.host-photo-wrap{text-align:center}
+.host-photo-label{display:block;margin-top:10px;font-family:Inter,system-ui,sans-serif;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--rust);opacity:.75}
+.host-text{flex:1 1 360px}
+.host-text blockquote{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:1.3rem;color:var(--rust);margin:0 0 16px;line-height:1.45}
+.host-text p.bio{font-size:1rem}
+.host-text p.credit{font-size:.9rem;opacity:.8;font-style:italic;margin-top:10px}
+.accordion-item{border-bottom:1px solid rgba(155,77,50,.15)}
+.accordion-item summary{font-family:Inter,system-ui,sans-serif;font-size:1.02rem;font-weight:700;color:var(--rust);padding:20px 4px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.accordion-item summary::-webkit-details-marker{display:none}
+.accordion-item summary::after{content:"+";font-family:"Playfair Display",Georgia,serif;font-size:1.4rem;color:var(--coral);margin-left:16px;transition:transform .2s ease;flex-shrink:0}
+.accordion-item[open] summary::after{transform:rotate(45deg)}
+.accordion-item .a-body{padding:0 4px 20px;font-size:.98rem;max-width:640px}
+@media (max-width:680px){
+  .path-card.featured{transform:none}
+  .path-card.featured .badge{position:static;display:inline-block;margin:0 0 12px}
+  .mandala{display:none}
+  .blend-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;margin-top:8px}
+  .blend-list .item{background:var(--shell);border-radius:14px;padding:18px 16px;text-align:center}
+  .blend-list .item .dot{width:44px;height:44px;border-radius:50%;margin:0 auto 10px;background:var(--paper);border:1.5px solid var(--coral);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:1.1rem;color:var(--rust)}
+  .blend-list .item span{font-family:Inter,system-ui,sans-serif;font-size:.82rem;font-weight:600;color:var(--rust)}
 }
 </style>
 </head>
@@ -144,12 +208,14 @@ section:has(+ #checkout){padding-bottom:0}
     <p class="eyebrow"><strong>BLACK FRIDAY SPECIAL · $47</strong></p>
     <h1>Tend your inner fire.</h1>
     <h2>A buffer for the holidays. A fresh start for the new year.</h2>
-    <p>The new and improved 21-day self-care course from Anna Brooke.</p>
+    <p>A Black Friday launch just for Anna's community: a relaunch of the latest and greatest version of her 21-day self-care course, at a lower price than the public launch.</p>
     <p>As the year draws to a close, give yourself a little space to breathe, take stock, and turn your attention back to yourself.</p>
     <p>Through simple daily invitations to breathe, move, reflect, clear space, and listen to your heart, you'll explore what it means to care for yourself in ways that fit your actual life.</p>
     <p>Start now, take what you need through the holidays, and carry the practice with you into the new year.</p>
+    <p><strong>Included free: two live workshops on Zoom with Anna, plus the recordings.</strong> November 28 and December 19, 11:00 AM–12:30 PM ET.</p>
+    <p>$47 is for her existing community, through Black Friday. After that, the course goes out to the public and the price goes up.</p>
     <a class="btn btn-sand" href="#checkout" id="signup-link">Get instant access for $47</a>
-    <p class="micro">Log in immediately · All 21 days available · Both workshops included free</p>
+    <p class="micro">Community price through Black Friday · Two live Zoom workshops with Anna · Recordings included</p>
   </div>
 </section>
 
@@ -386,52 +452,192 @@ section:has(+ #checkout){padding-bottom:0}
 
 <section class="shell">
   <div class="wrap">
-    <div class="narrow">
-      <p class="eyebrow">Included free with Inner Fire</p>
-      <h2>Both Coming Home workshops</h2>
-      <p>Coming Home is a monthly reconnection series with Anna. For Black Friday, both workshops are included free when you purchase Inner Fire.</p>
-      <p>Each gathering is a chance to step away from the noise and come back to yourself. The blend changes each time, drawn from breathwork, guided meditation, self-exploration, creative pauses, hands-on relaxation, and simple reset-and-reconnect practices.</p>
-      <p>You don't need any experience. The workshops meet you where you are.</p>
+    <div class="narrow center">
+      <p class="eyebrow">Included free for Black Friday</p>
+      <h2>Two live Zoom workshops with Anna, plus the recordings</h2>
+      <p>If you would like more personal help with regular self-care through the end of the year and beyond, Coming Home is a special series of Zoom workshops in November and December. They are here to help you move through the end of the year and into the new year with more calm, poise, and balance.</p>
+      <p>For this Black Friday launch, just for Anna's community, both remaining workshops are included free when you purchase Inner Fire. Live on Zoom with Anna. If you can't make it live, you receive the recording.</p>
     </div>
-    <div class="cards journey">
-      <article class="card">
+  </div>
+</section>
+
+<section class="rust">
+  <div class="wrap center">
+    <p class="label" style="color:var(--sky);margin-bottom:20px">Reset &amp; Reconnect</p>
+    <h2 style="font-size:clamp(2.8rem,8vw,4.5rem);line-height:1;margin-bottom:.15em">Coming Home</h2>
+    <p class="eyebrow" style="font-weight:600;font-size:.95rem;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-top:18px;margin-bottom:0">A Monthly Reconnection Series with Anna Brooke</p>
+    <p style="font-size:1.15rem;max-width:580px;margin:28px auto 36px">Modern life continually calls us out of ourselves and encourages us to ignore what our bodies really need: rest, reconnection, and a deep, loving reset. Each month, we gather to step away from the noise, collect ourselves, and reconnect with our own inner tides and rhythms.</p>
+    <div class="meta-row">
+      <div class="meta-chip" style="background:rgba(242,237,226,.08);border-color:rgba(242,237,226,.25);color:var(--sand)">Live on Zoom with Anna</div>
+      <div class="meta-chip" style="background:rgba(242,237,226,.08);border-color:rgba(242,237,226,.25);color:var(--sand)">90 minutes</div>
+      <div class="meta-chip" style="background:rgba(242,237,226,.08);border-color:rgba(242,237,226,.25);color:var(--sand)">11:00 AM–12:30 PM ET</div>
+      <div class="meta-chip" style="background:rgba(242,237,226,.08);border-color:rgba(242,237,226,.25);color:var(--sand)">Nov 28 &amp; Dec 19</div>
+      <div class="meta-chip" style="background:rgba(242,237,226,.08);border-color:rgba(242,237,226,.25);color:var(--sand)">Recordings included</div>
+    </div>
+    <a class="btn btn-sand" href="#checkout">Get instant access for $47</a>
+    <p class="cta-note" style="color:var(--sky)">Both workshops are included free with the Black Friday course. Live on Zoom with Anna, plus the recordings.</p>
+  </div>
+</section>
+
+<section class="sand" id="blend">
+  <div class="wrap center">
+    <div class="section-title">A different blend, every month</div>
+    <p class="section-lede center">Six practices to draw from, woven together differently each time, always in service of the same thing: coming back to yourself.</p>
+    <div class="blend-wrap">
+      <div class="mandala">
+        <svg class="mandala-lines" viewBox="0 0 480 480" aria-hidden="true">
+          <line x1="240" y1="240" x2="240" y2="80"/>
+          <line x1="240" y1="240" x2="380" y2="160"/>
+          <line x1="240" y1="240" x2="380" y2="320"/>
+          <line x1="240" y1="240" x2="240" y2="400"/>
+          <line x1="240" y1="240" x2="100" y2="320"/>
+          <line x1="240" y1="240" x2="100" y2="160"/>
+        </svg>
+        <div class="mandala-center">Come back<br>to yourself</div>
+        <div class="mandala-node" style="left:240px;top:50px;"><div class="dot">〰</div><span>Breathwork</span></div>
+        <div class="mandala-node" style="left:380px;top:135px;"><div class="dot">✧</div><span>Guided meditation</span></div>
+        <div class="mandala-node" style="left:380px;top:345px;"><div class="dot">❦</div><span>Self-exploration</span></div>
+        <div class="mandala-node" style="left:240px;top:430px;"><div class="dot">✎</div><span>Creative pauses</span></div>
+        <div class="mandala-node" style="left:100px;top:345px;"><div class="dot">☀</div><span>Hands-on relaxation</span></div>
+        <div class="mandala-node" style="left:100px;top:135px;"><div class="dot">✿</div><span>Reset &amp; reconnect practices</span></div>
+      </div>
+      <div class="blend-list">
+        <div class="item"><div class="dot">〰</div><span>Breathwork</span></div>
+        <div class="item"><div class="dot">✧</div><span>Guided meditation</span></div>
+        <div class="item"><div class="dot">❦</div><span>Self-exploration</span></div>
+        <div class="item"><div class="dot">✎</div><span>Creative pauses</span></div>
+        <div class="item"><div class="dot">☀</div><span>Hands-on relaxation</span></div>
+        <div class="item"><div class="dot">✿</div><span>Reset &amp; reconnect practices</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rust">
+  <div class="wrap center">
+    <div class="section-title" style="color:var(--shell)">Both gatherings are included</div>
+    <p class="section-lede center">October 17 has concluded. Two gatherings remain, each live on Zoom with Anna from 11:00 AM to 12:30 PM ET. For Black Friday, you receive both, plus the recordings.</p>
+    <div class="tide-row">
+      <div class="tide-node is-past">
+        <div class="moon">🌘</div>
+        <div class="month">October</div>
+        <div class="day">17</div>
+        <div class="status">Concluded</div>
+      </div>
+      <div class="tide-node">
+        <div class="moon">🌗</div>
+        <div class="month">November</div>
+        <div class="day">28</div>
+        <div class="status">Included</div>
+      </div>
+      <div class="tide-node">
+        <div class="moon">🌕</div>
+        <div class="month">December</div>
+        <div class="day">19</div>
+        <div class="status">Included</div>
+      </div>
+    </div>
+    <p style="margin-top:48px;font-size:1rem">A single workshop had been $47. Both remaining dates had been $80. For this community Black Friday launch, both are included free with the course, and so are the recordings.</p>
+  </div>
+</section>
+
+<section class="sand">
+  <div class="wrap center">
+    <div class="section-title">Yours with the course</div>
+    <p class="section-lede center">Not one date or the other. Both live workshops on Zoom with Anna, and a recording if you can't attend.</p>
+    <div class="paths-wrap">
+      <div class="path-card">
+        <div class="label path-label">Live on Zoom</div>
         <h3>November 28</h3>
-        <p>11:00 AM–12:30 PM ET.</p>
-        <p>A 90-minute live workshop on Zoom, included free.</p>
-      </article>
-      <article class="card">
+        <div class="amount">Included</div>
+        <p class="desc">One 90-minute session with Anna, 11:00 AM–12:30 PM ET. If you can't make it live, you'll receive the recording.</p>
+      </div>
+      <div class="path-card featured">
+        <div class="badge">Both, free</div>
+        <div class="label path-label">Live on Zoom</div>
         <h3>December 19</h3>
-        <p>11:00 AM–12:30 PM ET.</p>
-        <p>A 90-minute live workshop on Zoom, included free.</p>
-      </article>
-      <article class="card">
-        <h3>Can't make it live?</h3>
-        <p>If you can't attend a live workshop, you'll receive the recording.</p>
-      </article>
+        <div class="amount">Included</div>
+        <p class="desc">The second gathering, also with Anna, 11:00 AM–12:30 PM ET. Two chances to reset and reconnect, plus the recordings. Included with Inner Fire for Black Friday.</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="shell" id="host">
+  <div class="wrap">
+    <div class="section-title">Led by</div>
+    <div class="host-editorial">
+      <div class="host-photo-wrap">
+        <div class="host-photo"><img src="https://assets.cdn.filesafe.space/jNqy5QsBJRJ9cjslwRNp/media/684dd3a28bc25a3f9d44af4d.png" alt="Anna Brooke"></div>
+        <span class="host-photo-label">Facilitator</span>
+      </div>
+      <div class="host-text">
+        <blockquote>&ldquo;Rest, reconnection, and a deep, loving reset, that's what I want every person to leave with.&rdquo;</blockquote>
+        <p class="bio">For more than twenty years, Anna Brooke has supported people through transitions both big and small, offering a soft place to land while helping people reconnect with their truth, voice, and inner wisdom.</p>
+        <p class="credit">Her work has been featured in Huffington Post, BuzzFeed, and Page Six.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sand" id="workshop-faq">
+  <div class="wrap">
+    <div class="section-title">Good to know</div>
+    <details class="accordion-item" open>
+      <summary>How often does this run?</summary>
+      <div class="a-body">Once a month, live on Zoom with Anna, from 11:00 AM to 12:30 PM ET. October 17 has concluded. The remaining dates are November 28 and December 19. Both are included free with the Black Friday course, and you receive the recordings.</div>
+    </details>
+    <details class="accordion-item">
+      <summary>Do I get one workshop or both?</summary>
+      <div class="a-body">Both. A single workshop had been $47, and both remaining workshops had been $80. For this Black Friday launch, just for Anna's community, November 28 and December 19 are included free, plus the recordings.</div>
+    </details>
+    <details class="accordion-item">
+      <summary>What if I can't make it live?</summary>
+      <div class="a-body">You'll receive the recording of each workshop.</div>
+    </details>
+    <details class="accordion-item">
+      <summary>What will we actually do?</summary>
+      <div class="a-body">Each month is a different custom blend of breathwork, guided meditation, self-exploration, creative pauses, hands-on relaxation techniques, and simple reset-and-reconnect practices.</div>
+    </details>
+    <details class="accordion-item">
+      <summary>Do I need any experience?</summary>
+      <div class="a-body">None at all. This workshop is built to meet you exactly where you are.</div>
+    </details>
+  </div>
+</section>
+
+<section class="shell">
+  <div class="wrap">
     <div class="narrow">
-      <h2>Black Friday special</h2>
-      <p>Inner Fire is $47 for Black Friday.</p>
-      <p>That includes the complete 21-day course, and both Coming Home workshops at no extra cost.</p>
+      <h2>Black Friday, just for this community</h2>
+      <p>This is a relaunch of the latest and greatest version of the 21-day self-care course. Anna is opening it first to her existing community.</p>
+      <p>$47 is lower than the price when the course goes out to the public. After Black Friday, that public price is higher.</p>
+      <p>Your $47 also includes two popular Coming Home workshops, live on Zoom with Anna, plus the recordings.</p>
     </div>
     <div class="prices">
       <article class="price-card featured">
-        <h3>Black Friday special</h3>
+        <h3>Community Black Friday launch</h3>
         <p class="price">$47</p>
-        <p class="price-sub"><strong>Inner Fire + both workshops</strong></p>
-        <p>The full 21-day course, with both Coming Home workshops included free.</p>
+        <p class="price-sub"><strong>Course + two live workshops</strong></p>
+        <p>The relaunched 21-day course, two live Zoom workshops with Anna, and the recordings. For her community, through Black Friday.</p>
+      </article>
+      <article class="price-card later">
+        <h3>After Black Friday</h3>
+        <p class="price-sub"><strong>Public launch, higher price</strong></p>
+        <p>When the course opens beyond this community, the price goes up. The $47 offer, with both workshops included free, ends with Black Friday.</p>
       </article>
     </div>
     <div class="narrow offer">
       <h3>Your $47 Black Friday access includes</h3>
       <ul>
+        <li>The relaunch of the latest 21-day self-care course.</li>
         <li>Immediate login access to all 21 lessons.</li>
         <li>The freedom to move through the course at your own pace.</li>
         <li>A guided five-minute breathing track.</li>
         <li>A gentle stretching video with Anna.</li>
         <li>Journaling prompts and reflection exercises.</li>
-        <li>Both Coming Home workshops, November 28 and December 19, included free.</li>
-        <li>The recording of any live workshop you can't attend.</li>
+        <li>Two live workshops on Zoom with Anna: November 28 and December 19, 11:00 AM–12:30 PM ET, included free.</li>
+        <li>The recording of each live workshop.</li>
       </ul>
     </div>
     <p class="section-cta"><a class="btn btn-rust" href="#checkout">Get instant access for $47</a></p>
@@ -479,9 +685,11 @@ section:has(+ #checkout){padding-bottom:0}
     <p>Some of the later lessons explore the heart, gratitude, inner guidance, and prayer.</p>
     <p>You're welcome to engage with what feels meaningful to you and leave aside what doesn't.</p>
     <h3>Are the Coming Home workshops really included?</h3>
-    <p>Yes. For Black Friday, both workshops are included free when you purchase Inner Fire: November 28 and December 19, 11:00 AM–12:30 PM ET.</p>
+    <p>Yes. Black Friday includes two live workshops on Zoom with Anna, November 28 and December 19, 11:00 AM–12:30 PM ET, plus the recordings.</p>
     <h3>What if I can't make a live workshop?</h3>
     <p>You'll receive the recording.</p>
+    <h3>Will $47 last?</h3>
+    <p>$47 is the Black Friday price for Anna's existing community, and it is lower than the public launch. After Black Friday, the course goes out to the public and the price goes up.</p>
     <h3>What if the course isn't right for me?</h3>
     <p>Simply email me at <a class="mail" href="mailto:anna@annabrookehealing.com">anna@annabrookehealing.com</a> by January 1, 2027, and let me know why.</p>
     <p>I'll refund your purchase.</p>
@@ -500,8 +708,9 @@ section:has(+ #checkout){padding-bottom:0}
     <p>Let these 21 days be a place to return to when the season asks a lot of you.</p>
     <p>And when the new year arrives, carry that practice with you.</p>
     <p class="invite">Your light has not gone out. It may just need tending.</p>
+    <p>This Black Friday launch is for Anna's community: the relaunched course at $47, two live Zoom workshops with Anna, and the recordings. After Black Friday, the public price is higher.</p>
     <a class="btn btn-sand" href="#checkout">Get instant access for $47</a>
-    <p class="micro">Instant access · Both workshops included · Risk-free through January 1, 2027</p>
+    <p class="micro">Community price through Black Friday · Two live Zoom workshops · Recordings included</p>
     <p>Questions? Email <a class="mail" href="mailto:anna@annabrookehealing.com">anna@annabrookehealing.com</a></p>
   </div>
 </section>
